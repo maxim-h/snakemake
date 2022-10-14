@@ -1987,3 +1987,7 @@ def test_conda_python_script():
 @skip_on_windows
 def test_github_issue1818():
     run(dpath("test_github_issue1818"), rerun_triggers="input")
+
+
+def test_micromamba():
+    run(dpath("test_wrapper"), use_conda=True, conda_frontend="micromamba")
