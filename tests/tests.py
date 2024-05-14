@@ -1936,15 +1936,15 @@ def test_github_issue1882():
 
 
 def test_micromamba():
-    run(dpath("test_wrapper"), use_conda=True, conda_frontend="micromamba")
+    run(dpath("test_wrapper"), conda_frontend="micromamba")
 
 
 def test_conda_micromamba():
-    run(dpath("test_conda"), use_conda=True, conda_frontend="micromamba")
+    run(dpath("test_conda"), conda_frontend="micromamba")
 
 
 def test_micromamba_list_envs():
-    run(dpath("test_conda"), list_conda_envs=True, check_results=False)
+    run(dpath("test_conda"), conda_list_envs=True, check_results=False)
 
 
 @skip_on_windows  # not platform dependent
